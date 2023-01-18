@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<h2>1.Find the Smaller Angle</h2>
+<pre> var Minimal_Angle = (h, m) => 
+                {
+                     var hourAngle = ((h * 60) + m) * 0.5;
+                     var minuteAngle = m * 6;
+                     var angle = Math.abs(hourAngle - minuteAngle)
+                       if(angle > 180){
+                            return 360 - angle
+                       }
+                      else{
+                            return angle
+                       }
+                };    
+        </pre>
+
+
+  <h2>2.Check whether the year is Leap year or not.</h2>
+  <pre>var Check_Leap = (year) => 
+                 {
+                     if((year % 4 == 0)&& (year % 100 !== 0) || (year % 400 == 0)){
+                          return "Leap Year"
+                    }
+                 else{
+                          return "Non Leap Year"
+                     }
+          
+                };
+      </pre>
+
+      <h2>3.Perfect Number Check.</h2>
+
+      <pre> var Perfect_Check = (N) => 
+                 {   
+                     var sum = 0;
+                     for(let i = 1 ; i <= N; i++){ 
+                         if(N % i == 0){
+                            sum = sum + i;
+                         }
+                      }
+            
+                      if(sum == N){
+                         return "YES"
+                      }
+            
+                     else{
+                         return "NO"
+                     }
+                
+          };
+      </pre>
+      <h2>4.Reverse a Number.</h2>
+      <pre> var Reverse_Number = (N) => 
+                {
+                   N = N + ' '; 
+                   let b = Math.floor(N.split('').reverse().join(''))
+                      return b
+                };
+       </pre>
+       <h2>5.Substring Check.</h2>
+       <pre> var Substring_Check = (S1, S2) => 
+                 {
+                      var b = S1.includes(S2);
+                      if(b==true){
+                          return "YES";
+                      }
+            
+                    else{
+                          return "NO";
+                        }
+                 };
+         </pre>
+         
+
+
+
+
+
+
+
+</body>
+</html>
